@@ -1,0 +1,12 @@
+FSM fsm1
+VAR X, Y
+States:
+a: PRINT “state A”, X=X+1, sleep 10, wait
+b: PRINT “state B”, Y=Y+1, sleep 10, wait
+c: PRINT “thank you for using fsm1”, PRINT X, PRINT Y, end
+Transitions:
+a, b, 1
+b, a, 2
+a, a, 2
+b, b, 1
+b, c, 3

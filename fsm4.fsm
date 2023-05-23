@@ -1,0 +1,11 @@
+FSM fsm4
+VAR X, Y, Z
+States:
+start: PRINT “Starting the FSM”, X=0+X, Y=Y+0, Z=Z+0, sleep 2, wait
+state1: PRINT “ state 1”, X=X+1, Y=Y*2, sleep 3, wait
+state2: PRINT “ state 2”, Z=X+Y, sleep 4, wait
+end: PRINT “ FSM execution completed”, PRINT X, PRINT Y, PRINT Z, end
+Transitions:
+start, state1, 1
+state1, state2, 2
+state2, end, 3
